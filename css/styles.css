@@ -414,11 +414,12 @@ justify-content: center;
 }
 .product-item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-
+cursor: pointer;
 }
 
 .product-item-photo:hover .product-item-text {
     transform: translateY(0%);
+    
 }
 
 
@@ -568,6 +569,81 @@ align-items: baseline;
 margin-right: 120px;
 
 }
+
+
+.subcribe-paragraph {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.footer-bottom {
+margin-left: 120px;
+}
+
+.footer-email {
+    background-color: transparent;
+    border-radius: 4px;
+        border: 1px solid var(--WHITE, #FFF);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        width: 264px;
+        height: 40px;
+        color: #FFF;
+            font-family: Roboto;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.48px;
+            padding-left: 16px;
+}
+
+.footer-email::placeholder {
+    
+color: #FFF;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.48px;
+
+}
+
+.button-subscribe {
+
+    width: 165px;
+    height: 56px;
+    background: #4D5AE5;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.64px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    display: inline-flex;
+    padding: 8px 24px;
+    align-items: flex-start;
+    gap: 16px;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.button-subscribe:hover,
+.button-subscribe:focus {
+    background: #404BBF;
+
+}
+
+
 
 .backdrop {
     width: 100%;
