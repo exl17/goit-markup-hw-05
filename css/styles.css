@@ -588,7 +588,6 @@ margin-left: 120px;
     background-color: transparent;
     border-radius: 4px;
         border: 1px solid var(--WHITE, #FFF);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
         width: 264px;
         height: 40px;
         color: #FFF;
@@ -596,9 +595,13 @@ margin-left: 120px;
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
-            line-height: 24px;
-            letter-spacing: 0.48px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
             padding-left: 16px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+            
+            
 }
 
 .footer-email::placeholder {
@@ -615,31 +618,41 @@ color: #FFF;
 
 .button-subscribe {
 
-    width: 165px;
-    height: 56px;
-    background: #4D5AE5;
+min-width: 165px;
+    height: 40px;
+    background-color: #4D5AE5;
     color: #FFF;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.64px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    display: inline-flex;
+    display: flex;
     padding: 8px 24px;
     align-items: flex-start;
+    justify-content: center;
     gap: 16px;
     display: block;
     border: none;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: "Roboto", sans-serif;
+
     
 }
 
 .button-subscribe:hover,
 .button-subscribe:focus {
     background: #404BBF;
+
+}
+
+
+.footer-form {
+    display: flex;
+    gap: 24px;
 
 }
 
@@ -651,11 +664,13 @@ color: #FFF;
     background-color: #2E2F4266;
     position: fixed;
     top: 0;
-  
+    opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     visibility: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-
+padding: 72px 24px 24px 24px;
     
 }
 
@@ -670,6 +685,7 @@ color: #FFF;
         transform: translate(-50%, -50%);
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 
@@ -704,12 +720,18 @@ border: none;
     background-color: #404BBF;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
+    
 }
 
 
 .close-button:hover .icon-close {
-   fill: white;
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: white;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button:focus .icon-close {
+    fill: white;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -771,9 +793,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         height: 56px;
         border: none;
         cursor: pointer;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        
-        
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);       
 
 }
 
@@ -781,6 +801,10 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .send-button:hover,
 .button-order:focus {
     background: var(--OCEAN, #404BBF);
+}
+
+.icon-subscribe {
+    margin-left: 16px;
 }
 
 .modal-form {
@@ -848,6 +872,7 @@ left: 16px;
 transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
+
 }
 
 .input-div {
@@ -863,7 +888,7 @@ position: relative;
 
 .modal-input:focus + .icon-two {
     fill: #4D5AE5;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .check-label {
@@ -894,8 +919,9 @@ text-decoration: underline;
         border-radius: 2px;
         display: inline-flex;
         align-items: center;
-        margin-right: 8px;
         justify-content: center;
+        margin-right: 8px;
+        display: inline-flex;
         fill: transparent;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
@@ -907,6 +933,7 @@ text-decoration: underline;
 background-color: #404BBF;
 border: none;
 fill:#F4F4FD;
+display: inline-flex;
 }
 
 .is-open {
